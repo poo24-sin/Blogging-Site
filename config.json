@@ -1,0 +1,22 @@
+{
+  "params":
+  {
+    "local_server": "True",
+    "local_uri": "mysql+pymysql://root:@localhost/coding",
+    "prod_uri": "mysql+pymysql://root:@localhost/coding",
+    "fb_url":"https://www.facebook.com/coding",
+    "tw_url":"https://www.twitter.com/coding",
+    "gh_url":"https://www.github.com/coding",
+    "blog_name": "Code with me",
+    "tag_line": "Blog liked by Programmer",
+    "user_name": "thepsinha777@gmail.com",
+    "password": "",
+    "about_me": "Hi I'm Ishani Sinha I'm a Python Programmer.",
+    "post_me": "Ishani Sinha",
+    "no_of_post": 3,
+    "login_img": "my.jpg",
+    "user_admin": "ishani",
+    "admin_pwd": "hello",
+    "upload_location":"C:\\Users\\Ishani\\PycharmProjects\\Flask\\static"
+  }
+}

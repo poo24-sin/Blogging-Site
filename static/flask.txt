@@ -1,0 +1,27 @@
+from flask import Flask,render_template,request
+from flask_sqlalchemy import SQLAlchemy
+
+app = Flask(__name__)
+app.config['SQLALCHEMY_DATABASE_URI']="mysql+pymysql://root:@localhost/blog"
+
+db = SQLAlchemy(app)
+
+class Ishu(db.Model):
+    no = db.Column(db.Integer, primary_key=True)
+    name = db.Column(db.String(40), nullable=False)
+    address = db.Column(db.String(40),nullable=False)
+    img = db.Column(db.String(40),nullable=False)
+
+ #data Entery 
+
+@app.route('/contact',methods=['GET','POST'])
+def contact():
+    if(request.method=="POST"):
+        name = request.form.get('name')
+        address=request.form.get('address')
+        img=request.form.get('img')
+        entry=Ishu(name=name,address=address,img=img)
+        db.session.add(entry)
+        db.session.commit()
+    return render_template("contact.html")
+app.run(debug=True)
